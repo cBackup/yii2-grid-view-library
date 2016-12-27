@@ -4,7 +4,7 @@
  * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
-namespace dosamigos\grid;
+namespace cbackup\grid;
 
 use Closure;
 use yii\grid\DataColumn;
@@ -21,7 +21,7 @@ use yii\helpers\Html;
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @link http://www.ramirezcobos.com/
  * @link http://www.2amigos.us/
- * @package dosamigos\grid
+ * @package cbackup\grid
  */
 class GroupGridView extends GridView
 {

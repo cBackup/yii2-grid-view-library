@@ -1,6 +1,3 @@
-/build
-/vendor
-
 # cache directories
 Thumbs.db
 *.DS_Store
@@ -17,6 +14,9 @@ nbproject
 .project
 .settings
 
+# Composer
+/vendor
+composer.lock
 
 # mac deployment helpers
 switch

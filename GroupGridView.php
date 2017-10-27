@@ -18,6 +18,8 @@ use yii\helpers\Html;
  * A grid view that groups rows by any column(s). Yii2 ported version of
  * [Vitalets GroupGridView](https://github.com/vitalets/groupgridview)
  *
+ * Simplified for cBackup project by removing all unnecessary features
+ *
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @link http://www.ramirezcobos.com/
  * @link http://www.2amigos.us/
@@ -217,6 +219,7 @@ class GroupGridView extends GridView
         /** @var \yii\grid\Column $column */
         foreach ($this->columns as $column) {
 
+            /** @noinspection PhpUndefinedFieldInspection */
             $name = property_exists($column, 'attribute') ? $column->attribute : null;
 
             $isGroupColumn = in_array($name, $this->mergeColumns);
@@ -267,7 +270,7 @@ class GroupGridView extends GridView
      * @param number $totals
      * @return string the extra row
      */
-    protected function renderExtraRow($model, $key, $index, $totals)
+    protected function renderExtraRow(/** @noinspection PhpUnusedParameterInspection */$model, $key, $index, $totals)
     {
         if ($this->extraRowValue instanceof Closure) {
             $content = call_user_func($this->extraRowValue, $model, $index, $totals);
@@ -375,7 +378,7 @@ class GroupGridView extends GridView
      * @param int $index the zero-based index of the data model among the models array
      * @return mixed|null the result
      */
-    protected function getColumnDataCellValue($column, $model, $key, $index)
+    protected function getColumnDataCellValue(/** @noinspection PhpUnusedParameterInspection */$column, $model, $key, $index)
     {
         if ($column->value !== null) {
             if (is_string($column->value)) {

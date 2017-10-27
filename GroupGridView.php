@@ -100,7 +100,7 @@ class GroupGridView extends GridView
      */
     public function groupColumns()
     {
-        $models = $this->dataProvider->getModels();
+        $models = array_values($this->dataProvider->getModels());
 
         if (count($models) == 0) {
             return;
